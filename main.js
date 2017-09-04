@@ -1,8 +1,8 @@
-var app = angular.module('myApp', ['ngRoute', 'ngMaterial']);
-app.value('user', JSON.stringify({
+var app = angular.module('myApp', ['ngRoute', 'ngMaterial' ]);
+window.user= JSON.stringify({
     name: "Nome",
     totalIcoin: 20
-}));
+});
 
 app
 .config(function($routeProvider, $locationProvider) {
