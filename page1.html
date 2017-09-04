@@ -1,19 +1,63 @@
-<div ng-repeat="proj in vm.projects">
-    <div ng-click="vm.selectProject()" style="border: 1px solid black; display:inline;"> 
-            <label>
-                {{proj.name}}
-            </label>
-            <div>
+<style>
+    .projectCard{
+        padding:20px;
+        display:inline-block;
+    }
+</style>
+<h2>
+    Nível 1
+</h2>
+<div class="projectCard" ng-repeat="proj in vm.projects" ng-click="vm.selectProject(proj)"> 
+        <label>
+            {{proj.name}}
+        </label>
+        <div>
 
-            </div>
-            <p>
-                ICoin Investido: {{proj.invested}}
-            </p>
-            <p>
-                Total: {{proj.total}}
-                </p>
-            <input type="number" />
+        </div>
+        <p>
+            ICoin Investido: {{proj.invested}}
+        </p>
+        <p>
+            Total: {{proj.total}}
+        </p>
+</div>
+<h2>
+    Nível 2
+</h2>
+<div>
+    <div class="projectCard">
+      <label>
+            Projeto Mark II
+        </label>
+        <div>
+
+        </div>
+        <p>
+            ICoin Investido: 58 {{proj.invested}}
+        </p>
+        <p>
+            Total: 1200{{proj.total}}
+        </p>
     </div>
 
+</div>
+<h2>
+    Nível 3
+</h2>
+<div>
+    <div class="projectCard">
+      <label>
+            Project ICoin {{proj.name}}
+        </label>
+        <div>
+
+        </div>
+        <p>
+            ICoin Investido: 90{{proj.invested}}
+        </p>
+        <p>
+            Total: 10.600 {{proj.total}}
+        </p>
+    </div>
 
 </div>
