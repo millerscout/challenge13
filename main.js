@@ -1,5 +1,8 @@
 var app = angular.module('myApp', ['ngRoute', 'ngMaterial']);
-
+app.value('user', JSON.stringify({
+    name: "Nome",
+    totalIcoin: 20
+}));
 
 app
 .config(function($routeProvider, $locationProvider) {
@@ -12,7 +15,18 @@ app
     })
     .when('/page2', {
         templateUrl: 'page2.html'
-    });
+    })
+    .when('/dashboard', {
+        templateUrl: 'dashboard.html',
+        controller:  'dashboard',
+        controllerAs: "vm"
+    })
+    .when('/login', {
+        templateUrl: 'login.html',
+        controller: 'login',
+        controllerAs: 'vm'
+    })
+    ;
 
 })
 
